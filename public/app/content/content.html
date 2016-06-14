@@ -1,41 +1,8 @@
 <table class="table table-hover">
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
-        <td><a href="#">повысить</a></td>
-        <td><a href="#">понизить</a></td>
-    </tr>
-    <tr>
-        <td>ООО Дорстрой</td>
+    <tr *ngFor="#item of content">
+        <td>
+            {{ item }}
+        </td>
         <td><a href="#">повысить</a></td>
         <td><a href="#">понизить</a></td>
     </tr>

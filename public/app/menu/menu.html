@@ -1,9 +1,7 @@
 <table class="table table-hover">
-    <tr><td><a href="#">menu1</a></td></tr>
-    <tr><td><a href="#">menu1</a></td></tr>
-    <tr><td><a href="#">menu1</a></td></tr>
-    <tr><td><a href="#">menu1</a></td></tr>
-    <tr><td><a href="#">menu1</a></td></tr>
-    <tr><td><a href="#">menu1</a></td></tr>
-    <tr><td><a href="#">menu1</a></td></tr>
+    <tr *ngFor="#item of menu">
+        <td>
+            <a href="#">{{ item }}</a>
+        </td>
+    </tr>
 </table>
