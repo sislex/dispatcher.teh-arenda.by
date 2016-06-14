@@ -11,4 +11,10 @@
 |
 */
 
+use App\Categories;
+
 Route::get('/', function () {return view('index');});
+
+Route::get('/api/getCategories', function () {
+    return $content = (new Categories)->getCategories();
+});
