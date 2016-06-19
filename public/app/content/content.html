@@ -1,12 +1,12 @@
 <div class="col-md-12 text-center">
-    <h1>{{menuService.selectedMenu}}</h1>
+    <h1>{{ menuService.currentMenu }}</h1>
 </div>
 <table class="table table-hover">
-    <tr *ngFor="#item of content">
+    <tr *ngFor="let item of contentService.currentContent">
         <td>
             {{ item }}
         </td>
-        <td><a (click)="menuService.selectedMenu=item">повысить</a></td>
-        <td><a href="#">понизить</a></td>
+        <td><a (click)="menuService.setCurrentMenu(item)"> повысить </a></td>
+        <td><a href="#"> понизить </a></td>
     </tr>
 </table>

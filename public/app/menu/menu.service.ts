@@ -4,15 +4,23 @@ export class MenuService {
     constructor(){
         this.getMenuFromCloud();
     }
-
     private url = 'api/getCategories';  // URL to web api
-    public selectedMenu = '123';
+
+    public currentMenu = 'Выберите меню';
+
+    public getCurrentMenu() {
+        return this.currentMenu;
+    }
+
+    public setCurrentMenu(item) {
+        this.currentMenu = item;
+    }
 
     getMenuFromCloud() {
         //return this.http.get(this.url);
     }
 
-    getMenu(): string[] {
+    public getMenu(): string[] {
         // dummy data; should be replaced with connection to backend
         let dummyMenu = ['Экскаваторы','Погрузчики','Трактора','Бульдозеры','Краны'];
         return dummyMenu;

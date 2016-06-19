@@ -1,12 +1,7 @@
 <table class="table table-hover">
-    <tr>
+    <tr *ngFor="let item of menu">
         <td>
-           <b>{{menuService.selectedMenu}}</b>
-        </td>
-    </tr>
-    <tr *ngFor="#item of menu">
-        <td>
-            <a (click)="menuService.selectedMenu=item">{{ item }}</a>
+            <a (click)="changeMenu(item)">{{ item }}</a>
         </td>
     </tr>
 </table>
