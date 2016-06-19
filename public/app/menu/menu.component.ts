@@ -3,12 +3,11 @@ import { MenuService } from './menu.service';
 
 @Component({
     selector: '[menu-component]',
-    templateUrl: 'app/menu/menu.html',
-    providers: [MenuService]
+    templateUrl: 'app/menu/menu.html'
 })
 
 export class MenuComponent {
-    constructor(menuService: MenuService){
+    constructor(private menuService: MenuService){
         this.menu = menuService.getMenu();
     }
     

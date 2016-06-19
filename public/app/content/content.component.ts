@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ContentService } from './content.service';
+import { MenuService } from '../menu/menu.service';
 
 @Component({
     selector: '[content-component]',
@@ -8,7 +9,7 @@ import { ContentService } from './content.service';
 })
 
 export class ContentComponent {
-    constructor(contentService: ContentService){
+    constructor(private contentService: ContentService, private menuService: MenuService){
         this.content = contentService.getContent();
     }
     
