@@ -12,6 +12,7 @@
 */
 
 use App\Categories;
+use App\User;
 use Illuminate\Http\Response;
 
 Route::get('/', function () {return view('index');});
@@ -21,4 +22,11 @@ Route::get('/api/getCategories', function () {
     header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
     header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'); // allow certain headers
     return $content = (new Categories)->getCategories();
+});
+
+Route::get('/api/getUsersByCategoriesId/{id}', function ($id) {
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'); // allow certain headers
+    return $content = (new User)->getUsersByCategoriesId($id);
 });
