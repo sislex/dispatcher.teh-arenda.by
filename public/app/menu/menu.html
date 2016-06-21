@@ -1,9 +1,7 @@
 <table class="table table-hover">
     <tr *ngFor="let category of categories">
-        <td>
-            <a (click)="selectCategory(category.name)">
-                {{ category.name }}
-            </a>
+        <td *ngIf="category.category_id == 0">
+            <a (click)="selectCategory(category.name)">{{ category.name }}</a>
         </td>
     </tr>
 </table>

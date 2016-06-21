@@ -11,6 +11,7 @@ export class MenuComponent {
     constructor(private menuService: MenuService, private contentService: ContentService) {
         this.menuService.getCategories()
             .then(result => {this.categories = result});
+            // .then(result => {console.log(result)});
     }
 
     private selectCategory(name) {
