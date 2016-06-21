@@ -9,11 +9,12 @@ import { ContentService } from 'app/content/content.service'
 
 export class MenuComponent {
     constructor(private menuService: MenuService, private contentService: ContentService) {
-        this.menu = this.menuService.getMenu();
+        this.menuService.getCategories()
+            .then(result => {this.categories = result});
     }
 
-    private changeMenu(item) {
-        this.menuService.setCurrentMenu(item);
-        this.contentService.setCurrentContent(item);
+    private selectCategory(name) {
+        this.menuService.setCurrentCategory(name);
+        this.contentService.setCurrentContent(name);
     }
 }

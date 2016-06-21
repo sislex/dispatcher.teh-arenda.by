@@ -13,8 +13,8 @@ export class ContentService {
         return this.currentContent;
     }
 
-    public setCurrentContent(selectedMenu) {
-        this.currentContent = this.dummyContent[selectedMenu];
+    public setCurrentContent(categoryName) {
+        this.currentContent = this.dummyContent[categoryName];
     }
     
     public getContent(): string[] {
