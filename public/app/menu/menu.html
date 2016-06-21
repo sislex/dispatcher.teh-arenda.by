@@ -1,7 +1,12 @@
 <table class="table table-hover">
-    <tr *ngFor="let category of categories">
-        <td *ngIf="category.category_id == 0">
+    <ul *ngFor="let category of categories" class="nav nav-pills nav-stacked">
+        <li *ngIf="category.category_id == 0">
             <a (click)="selectCategory(category.name)">{{ category.name }}</a>
-        </td>
-    </tr>
+            <ul *ngIf="category.children">
+                <li>
+                    <a (click)="selectCategory(category.children.name)">{{ category.children.name }}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </table>

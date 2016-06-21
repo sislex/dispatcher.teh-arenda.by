@@ -5,9 +5,7 @@
 </div>
 <table class="table table-hover">
     <tr *ngFor="let item of contentService.currentContent">
-        <td>
-            {{ item }}
-        </td>
+        <td>{{ item }}</td>
         <td>
             <a (click)="menuService.setCurrentCategory(item)"> повысить </a>
         </td>
